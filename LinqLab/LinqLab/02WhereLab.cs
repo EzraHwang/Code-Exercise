@@ -25,7 +25,8 @@ namespace LinqLab
 
         public List<Sample> 搜尋UserName開頭為d的資料()
         {
-            return Source.Where(item => item.UserName[0] == 'd').ToList();
+            //return Source.Where(item => item.UserName[0] == 'd').ToList();
+            return Source.Where(item => item.UserName.StartsWith("d")).ToList();
         }
 
         public List<Sample> 搜尋UserName包含e的資料()
@@ -35,7 +36,8 @@ namespace LinqLab
 
         public List<Sample> 搜尋UserName結尾為o的資料()
         {
-            return Source.Where(item => item.UserName[item.UserName.Length-1] == 'o').ToList();
+            //return Source.Where(item => item.UserName[item.UserName.Length-1] == 'o').ToList();
+            return Source.Where(item => item.UserName.EndsWith("o")).ToList();
         }
 
         public List<Sample> 搜尋UserName是demo和joey的資料()
